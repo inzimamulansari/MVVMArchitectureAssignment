@@ -17,6 +17,9 @@
 		1856967E27BE3E53007D2DEC /* MVVMArchitectureAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856967D27BE3E53007D2DEC /* MVVMArchitectureAssignmentTests.swift */; };
 		1856968827BE3E53007D2DEC /* MVVMArchitectureAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856968727BE3E53007D2DEC /* MVVMArchitectureAssignmentUITests.swift */; };
 		1856968A27BE3E53007D2DEC /* MVVMArchitectureAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856968927BE3E53007D2DEC /* MVVMArchitectureAssignmentUITestsLaunchTests.swift */; };
+		1856969C27BE3F39007D2DEC /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856969B27BE3F39007D2DEC /* DataLoader.swift */; };
+		1856969E27BE3F45007D2DEC /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856969D27BE3F45007D2DEC /* UserData.swift */; };
+		185696A127BE3FD4007D2DEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185696A027BE3FD4007D2DEC /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		1856968327BE3E53007D2DEC /* MVVMArchitectureAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMArchitectureAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1856968727BE3E53007D2DEC /* MVVMArchitectureAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMArchitectureAssignmentUITests.swift; sourceTree = "<group>"; };
 		1856968927BE3E53007D2DEC /* MVVMArchitectureAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMArchitectureAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1856969B27BE3F39007D2DEC /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		1856969D27BE3F45007D2DEC /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		185696A027BE3FD4007D2DEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 				1856967127BE3E53007D2DEC /* LaunchScreen.storyboard */,
 				1856967427BE3E53007D2DEC /* Info.plist */,
 				1856966C27BE3E4C007D2DEC /* MVVMArchitectureAssignment.xcdatamodeld */,
+				1856969627BE3E98007D2DEC /* MVVM */,
 			);
 			path = MVVMArchitectureAssignment;
 			sourceTree = "<group>";
@@ -128,6 +135,48 @@
 				1856968927BE3E53007D2DEC /* MVVMArchitectureAssignmentUITestsLaunchTests.swift */,
 			);
 			path = MVVMArchitectureAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		1856969627BE3E98007D2DEC /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1856969727BE3EA9007D2DEC /* Modals */,
+				1856969A27BE3F00007D2DEC /* View */,
+				1856969927BE3ED1007D2DEC /* ViewModal */,
+				1856969F27BE3F6C007D2DEC /* Controller */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		1856969727BE3EA9007D2DEC /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				1856969D27BE3F45007D2DEC /* UserData.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		1856969927BE3ED1007D2DEC /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				1856969B27BE3F39007D2DEC /* DataLoader.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		1856969A27BE3F00007D2DEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1856969F27BE3F6C007D2DEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185696A027BE3FD4007D2DEC /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1856969E27BE3F45007D2DEC /* UserData.swift in Sources */,
+				1856969C27BE3F39007D2DEC /* DataLoader.swift in Sources */,
 				1856966827BE3E4C007D2DEC /* ViewController.swift in Sources */,
 				1856966E27BE3E4C007D2DEC /* MVVMArchitectureAssignment.xcdatamodeld in Sources */,
 				1856966427BE3E4C007D2DEC /* AppDelegate.swift in Sources */,
+				185696A127BE3FD4007D2DEC /* HomeViewController.swift in Sources */,
 				1856966627BE3E4C007D2DEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
