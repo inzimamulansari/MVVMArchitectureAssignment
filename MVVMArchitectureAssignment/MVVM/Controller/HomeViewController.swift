@@ -1,3 +1,4 @@
+
 //
 //  HomeViewController.swift
 //  MVVMArchitectureAssignment
@@ -8,22 +9,38 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let loader = DataLoader()
+    @Published var userData = [UserData]()
+    
+    
+    @IBOutlet var tab : UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loader.loadFromInternet{
+            (data,error)  in
+            self.userData = (data)!
+            DispatchQueue.main.async {
+                self.tab.reloadData()
+            }
+        }
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+
+extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userData.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = userData[indexPath.row].timezone
+        return cell
     }
-    */
-
+    
+    
 }
